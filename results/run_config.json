@@ -1,0 +1,41 @@
+{
+  "seed": 42,
+  "dataset": "cfilt/iitb-english-hindi",
+  "train_pool": 50000,
+  "train_size": 2000,
+  "validation_size": 100,
+  "test_size": 100,
+  "max_chars": 240,
+  "max_words": 40,
+  "vocab_size": 8000,
+  "d_model": 128,
+  "nhead": 4,
+  "layers": 2,
+  "ff_dim": 512,
+  "dropout": 0.1,
+  "basic_epochs": 6,
+  "basic_batch": 32,
+  "basic_lr": 0.0003,
+  "mt5_epochs": 2,
+  "mt5_batch": 1,
+  "mt5_accumulation": 16,
+  "mt5_lr": 0.0005,
+  "max_new_tokens": 128,
+  "max_input_tokens": 1024,
+  "temperature_examples": 25,
+  "temperatures": [
+    0.3,
+    0.7,
+    1.0
+  ],
+  "sampling_seeds": [
+    42,
+    43,
+    44
+  ],
+  "models": {
+    "mt5": "google/mt5-small",
+    "llama": "meta-llama/Llama-3.2-1B-Instruct",
+    "gemma": "google/gemma-3-1b-it"
+  }
+}

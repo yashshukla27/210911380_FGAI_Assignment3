@@ -1,0 +1,14 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+  "device": "cpu",
+  "gpu": null,
+  "torch": "2.6.0+cpu",
+  "cpu_threads": 4,
+  "versions": {
+    "transformers": "4.51.3",
+    "datasets": "3.6.0",
+    "sacrebleu": "2.5.1",
+    "sentencepiece": "0.2.0"
+  }
+}

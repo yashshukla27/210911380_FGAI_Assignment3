@@ -1,0 +1,13 @@
+test_llama_and_gemma_generation_api (test_hf_api.HuggingFaceAPITests.test_llama_and_gemma_generation_api) ... ok
+test_mt5_finetuning_step (test_hf_api.HuggingFaceAPITests.test_mt5_finetuning_step) ... ok
+test_backward_and_padding (test_pipeline.PipelineTests.test_backward_and_padding) ... ok
+test_causal_mask_prevents_future_token_leakage (test_pipeline.PipelineTests.test_causal_mask_prevents_future_token_leakage) ... /root/.local/lib/python3.12/site-packages/torch/nn/modules/transformer.py:508: UserWarning: The PyTorch API of nested tensors is in prototype stage and will change in the near future. We recommend specifying layout=torch.jagged when constructing a nested tensor, as this layout receives active development, has better operator coverage, and works with torch.compile. (Triggered internally at /pytorch/aten/src/ATen/NestedTensorImpl.cpp:178.)
+  output = torch._nested_tensor_from_mask(
+ok
+test_metrics_alignment_and_identity (test_pipeline.PipelineTests.test_metrics_alignment_and_identity) ... ok
+test_normalization_and_cross_split_duplicates (test_pipeline.PipelineTests.test_normalization_and_cross_split_duplicates) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.898s
+
+OK

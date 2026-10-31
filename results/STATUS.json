@@ -1,0 +1,12 @@
+{
+  "implementation": "prepared; six local component/API tests passed",
+  "dataset": "downloaded and frozen; 2000 train, 100 validation, 100 test",
+  "basic": "executed; 0 BLEU/chrF due to empty greedy outputs",
+  "mt5": "Prior fine-tuning stopped before a completed checkpoint/evaluation; no completed metrics available",
+  "llama": "blocked: model access required (401 GatedRepoError)",
+  "gemma": "blocked: model access required (401 GatedRepoError)",
+  "github": "Published to https://github.com/yashshukla27/210911380_FGAI_Assignment3",
+  "lms": "not submitted",
+  "submission_ready": false,
+  "latest_validation": "Original six checks passed; current retry blocked by missing PyTorch. Python source and notebook syntax checked."
+}

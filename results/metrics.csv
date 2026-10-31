@@ -1,0 +1,2 @@
+﻿model,adaptation,bleu,chrf,bleu_signature,chrf_signature,training_seconds,load_and_setup_seconds,inference_seconds,seconds_per_sentence,test_sentences,parameters,trainable_parameters,parameter_bytes,peak_cuda_allocated_mb,capped_outputs,dtype,device,hardware
+basic,trained from scratch; best validation NLL checkpoint,0.0,0.0,nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1,nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.5.1,47.30488893599977,0.8709694530007255,0.27723704500021995,0.0027723704500021997,100,2982208,2982208,11928832,,0,torch.float32,cpu,x86_64

@@ -1,0 +1,586 @@
+sentencepiece_trainer.cc(78) LOG(INFO) Starts training with : 
+trainer_spec {
+  input: /workspace/scratch/4612eb3a7665/fgai-assignment3/checkpoints/basic/tokenizer_train.txt
+  input_format: 
+  model_prefix: /workspace/scratch/4612eb3a7665/fgai-assignment3/checkpoints/basic/tokenizer
+  model_type: BPE
+  vocab_size: 8000
+  self_test_sample_size: 0
+  character_coverage: 1
+  input_sentence_size: 0
+  shuffle_input_sentence: 0
+  seed_sentencepiece_size: 1000000
+  shrinking_factor: 0.75
+  max_sentence_length: 4192
+  num_threads: 1
+  num_sub_iterations: 2
+  max_sentencepiece_length: 16
+  split_by_unicode_script: 1
+  split_by_number: 1
+  split_by_whitespace: 1
+  split_digits: 0
+  pretokenization_delimiter: 
+  treat_whitespace_as_suffix: 0
+  allow_whitespace_only_pieces: 0
+  required_chars: 
+  byte_fallback: 0
+  vocabulary_output_piece_score: 1
+  train_extremely_large_corpus: 0
+  seed_sentencepieces_file: 
+  hard_vocab_limit: 0
+  use_all_vocab: 0
+  unk_id: 1
+  bos_id: 2
+  eos_id: 3
+  pad_id: 0
+  unk_piece: <unk>
+  bos_piece: <s>
+  eos_piece: </s>
+  pad_piece: <pad>
+  unk_surface:  ⁇ 
+  enable_differential_privacy: 0
+  differential_privacy_noise_level: 0
+  differential_privacy_clipping_threshold: 0
+}
+normalizer_spec {
+  name: nmt_nfkc
+  add_dummy_prefix: 1
+  remove_extra_whitespaces: 1
+  escape_whitespaces: 1
+  normalization_rule_tsv: 
+}
+denormalizer_spec {}
+trainer_interface.cc(353) LOG(INFO) SentenceIterator is not specified. Using MultiFileSentenceIterator.
+trainer_interface.cc(185) LOG(INFO) Loading corpus: /workspace/scratch/4612eb3a7665/fgai-assignment3/checkpoints/basic/tokenizer_train.txt
+trainer_interface.cc(409) LOG(INFO) Loaded all 4000 sentences
+trainer_interface.cc(425) LOG(INFO) Adding meta_piece: <pad>
+trainer_interface.cc(425) LOG(INFO) Adding meta_piece: <unk>
+trainer_interface.cc(425) LOG(INFO) Adding meta_piece: <s>
+trainer_interface.cc(425) LOG(INFO) Adding meta_piece: </s>
+trainer_interface.cc(430) LOG(INFO) Normalizing sentences...
+trainer_interface.cc(539) LOG(INFO) all chars count=109631
+trainer_interface.cc(560) LOG(INFO) Alphabet size=153
+trainer_interface.cc(561) LOG(INFO) Final character coverage=1
+trainer_interface.cc(592) LOG(INFO) Done! preprocessed 4000 sentences.
+trainer_interface.cc(598) LOG(INFO) Tokenizing input sentences with whitespace: 4000
+trainer_interface.cc(609) LOG(INFO) Done! 5490
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1699 min_freq=9
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=404 size=20 all=2706 active=1526 piece=▁म
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=296 size=40 all=3100 active=1920 piece=#-
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=235 size=60 all=3525 active=2345 piece=क्
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=191 size=80 all=3906 active=2726 piece=▁D
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=153 size=100 all=4228 active=3048 piece=▁ख
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=152 min_freq=16
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=128 size=120 all=4547 active=1307 piece=▁E
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=106 size=140 all=4948 active=1708 piece=का
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=91 size=160 all=5128 active=1888 piece=ल्
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=82 size=180 all=5384 active=2144 piece=▁g
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=74 size=200 all=5611 active=2371 piece=न्
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=74 min_freq=14
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=67 size=220 all=5830 active=1185 piece=ला
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=60 size=240 all=6053 active=1408 piece=▁us
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=54 size=260 all=6197 active=1552 piece=▁भ
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=50 size=280 all=6350 active=1705 piece=ेल
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=47 size=300 all=6475 active=1830 piece=िक
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=47 min_freq=12
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=44 size=320 all=6670 active=1174 piece=ंत
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=42 size=340 all=6862 active=1366 piece=ter
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=40 size=360 all=7016 active=1520 piece=▁किया
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=38 size=380 all=7171 active=1675 piece=▁पू
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=36 size=400 all=7278 active=1782 piece=▁यह
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=36 min_freq=11
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=33 size=420 all=7407 active=1130 piece=ri
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=32 size=440 all=7511 active=1234 piece=ath
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=31 size=460 all=7597 active=1320 piece=योजना
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=29 size=480 all=7701 active=1424 piece=ave
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=28 size=500 all=7786 active=1509 piece=दि
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=28 min_freq=10
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=27 size=520 all=7885 active=1096 piece=▁De
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=26 size=540 all=7982 active=1193 piece=▁le
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=25 size=560 all=8086 active=1297 piece=▁दे
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=24 size=580 all=8161 active=1372 piece=ize
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=23 size=600 all=8256 active=1467 piece=ras
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=23 min_freq=9
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=22 size=620 all=8338 active=1077 piece=ure
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=21 size=640 all=8419 active=1158 piece=गल
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=21 size=660 all=8563 active=1302 piece=▁Im
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=20 size=680 all=8640 active=1379 piece=udi
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=19 size=700 all=8693 active=1432 piece=te
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=19 min_freq=8
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=19 size=720 all=8815 active=1115 piece=▁सब
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=18 size=740 all=8844 active=1144 piece=ON
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=18 size=760 all=8921 active=1221 piece=▁Com
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=17 size=780 all=8933 active=1233 piece=ष्
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=17 size=800 all=9024 active=1324 piece=▁एं
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=17 min_freq=7
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=17 size=820 all=9069 active=1044 piece=▁user
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=16 size=840 all=9110 active=1085 piece=ुम
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=16 size=860 all=9180 active=1155 piece=gram
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=16 size=880 all=9209 active=1184 piece=▁time
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=15 size=900 all=9283 active=1258 piece=ign
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=15 min_freq=7
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=15 size=920 all=9362 active=1069 piece=▁लें
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=15 size=940 all=9373 active=1080 piece=▁Empathy
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=14 size=960 all=9455 active=1162 piece=ख्य
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=14 size=980 all=9500 active=1207 piece=▁अगर
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=14 size=1000 all=9500 active=1207 piece=▁could
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=14 min_freq=6
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=13 size=1020 all=9544 active=1045 piece=ule
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=13 size=1040 all=9595 active=1096 piece=▁खेल
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=13 size=1060 all=9619 active=1120 piece=▁enable
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=12 size=1080 all=9690 active=1191 piece=ोक
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=12 size=1100 all=9757 active=1258 piece=▁आई
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=12 min_freq=6
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=12 size=1120 all=9822 active=1061 piece=▁out
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=12 size=1140 all=9842 active=1081 piece=प्रयोग
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=11 size=1160 all=9848 active=1087 piece=ep
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=11 size=1180 all=9931 active=1170 piece=▁af
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=11 size=1200 all=9976 active=1215 piece=▁New
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=11 min_freq=6
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=11 size=1220 all=9982 active=1007 piece=▁after
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=10 size=1240 all=9981 active=1006 piece=AP
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=10 size=1260 all=10053 active=1078 piece=ark
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=10 size=1280 all=10106 active=1131 piece=▁डा
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=10 size=1300 all=10169 active=1194 piece=ड़ाई
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=10 min_freq=5
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=10 size=1320 all=10177 active=1007 piece=▁load
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=10 size=1340 all=10176 active=1006 piece=▁पूर्व
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=10 size=1360 all=10180 active=1010 piece=▁मेलबाक्स
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=9 size=1380 all=10251 active=1081 piece=्ड
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=9 size=1400 all=10318 active=1148 piece=▁Up
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=9 min_freq=5
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=9 size=1420 all=10359 active=1041 piece=▁अति
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=9 size=1440 all=10381 active=1063 piece=▁must
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=9 size=1460 all=10387 active=1069 piece=▁क्लिक
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=9 size=1480 all=10379 active=1061 piece=versation
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=8 size=1500 all=10401 active=1083 piece=▁z
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=8 min_freq=5
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=8 size=1520 all=10466 active=1065 piece=ाइस
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=8 size=1540 all=10511 active=1110 piece=cess
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=8 size=1560 all=10544 active=1143 piece=▁Tra
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=8 size=1580 all=10562 active=1161 piece=रिक्त
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=8 size=1600 all=10563 active=1162 piece=▁जाना
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=8 min_freq=4
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=8 size=1620 all=10564 active=1002 piece=▁लिखने
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=8 size=1640 all=10561 active=999 piece=▁Connect
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=7 size=1660 all=10558 active=996 piece=au
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=7 size=1680 all=10621 active=1059 piece=टरी
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=7 size=1700 all=10661 active=1099 piece=▁To
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=7 min_freq=4
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=7 size=1720 all=10692 active=1030 piece=fore
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=7 size=1740 all=10713 active=1051 piece=▁ind
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=7 size=1760 all=10732 active=1070 piece=print
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=7 size=1780 all=10728 active=1066 piece=▁आयात
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=7 size=1800 all=10728 active=1066 piece=▁gener
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=7 min_freq=4
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=7 size=1820 all=10733 active=1003 piece=▁Cannot
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=7 size=1840 all=10725 active=995 piece=▁प्रभाव
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=6 size=1860 all=10710 active=980 piece=SL
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=6 size=1880 all=10764 active=1034 piece=▁<
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=6 size=1900 all=10810 active=1080 piece=दाह
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=6 min_freq=4
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=6 size=1920 all=10843 active=1032 piece=▁फं
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=6 size=1940 all=10880 active=1069 piece=निर्
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=6 size=1960 all=10918 active=1107 piece=▁row
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=6 size=1980 all=10928 active=1117 piece=amera
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=6 size=2000 all=10947 active=1136 piece=▁Mode
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=6 min_freq=4
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=6 size=2020 all=10938 active=992 piece=▁आवाज
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=6 size=2040 all=10930 active=984 piece=▁Audio
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=6 size=2060 all=10920 active=974 piece=▁जाएगा
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=6 size=2080 all=10910 active=964 piece=▁system
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=6 size=2100 all=10898 active=952 piece=▁process
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=6 min_freq=3
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=6 size=2120 all=10882 active=985 piece=▁निर्धारित
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=5 size=2140 all=10903 active=1006 piece=आई
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=5 size=2160 all=10945 active=1048 piece=een
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=5 size=2180 all=10990 active=1093 piece=केत
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=5 size=2200 all=11018 active=1121 piece=ोंट
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=5 min_freq=3
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=5 size=2220 all=11044 active=1026 piece=ific
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=5 size=2240 all=11073 active=1055 piece=▁Jab
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=5 size=2260 all=11084 active=1066 piece=▁दूस
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=5 size=2280 all=11097 active=1079 piece=कमिंग
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=5 size=2300 all=11103 active=1085 piece=▁free
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=5 min_freq=3
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=5 size=2320 all=11104 active=1002 piece=▁टाइम
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=5 size=2340 all=11108 active=1006 piece=▁Group
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=5 size=2360 all=11093 active=991 piece=▁गिनती
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=5 size=2380 all=11094 active=992 piece=▁Target
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=5 size=2400 all=11083 active=981 piece=▁प्रमाण
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=5 min_freq=3
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=5 size=2420 all=11069 active=986 piece=▁कनेक्शन
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=5 size=2440 all=11053 active=970 piece=▁Simulation
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2460 all=11075 active=992 piece=डर
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2480 all=11112 active=1029 piece=eop
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2500 all=11146 active=1063 piece=क्य
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=4 min_freq=3
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2520 all=11184 active=1034 piece=वाब
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2540 all=11198 active=1048 piece=▁At
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2560 all=11208 active=1058 piece=▁मो
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2580 all=11232 active=1082 piece=itle
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2600 all=11250 active=1100 piece=वाइस
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=4 min_freq=3
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2620 all=11255 active=1005 piece=▁Lib
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2640 all=11268 active=1018 piece=▁ver
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2660 all=11264 active=1014 piece=▁लगा
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2680 all=11282 active=1032 piece=ribut
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2700 all=11287 active=1037 piece=▁Mark
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=4 min_freq=3
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2720 all=11280 active=992 piece=▁prot
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2740 all=11275 active=987 piece=▁जवाब
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2760 all=11265 active=977 piece=▁लपेट
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2780 all=11267 active=979 piece=▁Trash
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2800 all=11253 active=965 piece=▁अवतार
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=4 min_freq=2
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2820 all=11245 active=993 piece=▁फॉर्म
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2840 all=11241 active=989 piece=inished
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2860 all=11231 active=979 piece=▁events
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2880 all=11215 active=963 piece=▁केंद्र
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2900 all=11205 active=953 piece=▁Include
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=4 min_freq=2
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2920 all=11187 active=983 piece=orizontal
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2940 all=11171 active=967 piece=▁संतृप्ति
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=4 size=2960 all=11153 active=949 piece=▁operations
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=2980 all=11156 active=952 piece=ox
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3000 all=11185 active=981 piece=▁`
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=3 min_freq=2
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3020 all=11216 active=1030 piece=sed
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3040 all=11239 active=1053 piece=मेश
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3060 all=11274 active=1088 piece=ेंट
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3080 all=11292 active=1106 piece=▁ओर
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3100 all=11303 active=1117 piece=atur
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=3 min_freq=2
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3120 all=11330 active=1024 piece=rame
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3140 all=11353 active=1047 piece=पेंड
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3160 all=11373 active=1067 piece=▁Das
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3180 all=11375 active=1069 piece=▁fam
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3200 all=11370 active=1064 piece=▁कुल
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=3 min_freq=2
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3220 all=11370 active=1000 piece=▁रही
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3240 all=11389 active=1019 piece=level
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3260 all=11407 active=1037 piece=लाकार
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3280 all=11408 active=1038 piece=▁Norm
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3300 all=11404 active=1034 piece=▁know
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=3 min_freq=2
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3320 all=11393 active=990 piece=▁खींच
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3340 all=11392 active=989 piece=▁मिटा
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3360 all=11395 active=992 piece=बद्धता
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3380 all=11387 active=984 piece=▁build
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3400 all=11376 active=973 piece=▁usage
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=3 min_freq=2
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3420 all=11365 active=990 piece=▁बनावट
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3440 all=11356 active=981 piece=ocomple
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3460 all=11353 active=978 piece=▁buffer
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3480 all=11340 active=965 piece=▁typing
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3500 all=11324 active=949 piece=▁प्रसंग
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=3 min_freq=2
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3520 all=11313 active=990 piece=▁Command
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3540 all=11298 active=975 piece=▁coordin
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3560 all=11283 active=960 piece=▁ऑफ़लाइन
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3580 all=11273 active=950 piece=▁Contacts
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3600 all=11255 active=932 piece=▁suitable
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=3 min_freq=2
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3620 all=11236 active=982 piece=▁direction
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=3 size=3640 all=11221 active=967 piece=▁containing
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=3660 all=11202 active=948 piece=".
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=3680 all=11204 active=950 piece=AL
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=3700 all=11217 active=963 piece=ex
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=2 min_freq=2
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=3720 all=11237 active=1018 piece=कः
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=3740 all=11261 active=1042 piece=लू
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=3760 all=11268 active=1049 piece=New
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=3780 all=11288 active=1069 piece=ify
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=3800 all=11306 active=1087 piece=sfs
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=2 min_freq=2
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=3820 all=11327 active=1021 piece=ंये
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=3840 all=11342 active=1036 piece=बार
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=3860 all=11360 active=1054 piece=ाइं
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=3880 all=11355 active=1049 piece=▁Ca
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=3900 all=11353 active=1047 piece=▁ll
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=2 min_freq=2
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=3920 all=11360 active=1008 piece=▁डॉ
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=3940 all=11360 active=1008 piece=Stre
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=3960 all=11375 active=1023 piece=ider
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=3980 all=11393 active=1041 piece=roll
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4000 all=11409 active=1057 piece=बाइल
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=2 min_freq=2
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4020 all=11420 active=1011 piece=शिता
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4040 all=11426 active=1017 piece=▁Blu
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4060 all=11422 active=1013 piece=▁Tab
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4080 all=11419 active=1010 piece=▁min
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4100 all=11413 active=1004 piece=▁टूट
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=2 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4120 all=11403 active=990 piece=▁नकल
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4140 all=11397 active=984 piece=▁सके
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4160 all=11402 active=989 piece=eline
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4180 all=11413 active=1000 piece=quest
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4200 all=11420 active=1007 piece=त्तों
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=2 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4220 all=11428 active=1008 piece=्रवाई
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4240 all=11423 active=1003 piece=▁Dock
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4260 all=11412 active=992 piece=▁Sign
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4280 all=11401 active=981 piece=▁edge
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4300 all=11391 active=971 piece=▁prom
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=2 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4320 all=11384 active=992 piece=▁आयतन
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4340 all=11373 active=981 piece=▁धीमा
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4360 all=11359 active=967 piece=▁भरने
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4380 all=11347 active=955 piece=▁वापस
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4400 all=11344 active=952 piece=alyzer
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=2 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4420 all=11357 active=1013 piece=चिपकाओ
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4440 all=11347 active=1003 piece=▁GStre
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4460 all=11334 active=990 piece=▁Watch
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4480 all=11322 active=978 piece=▁frame
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4500 all=11309 active=965 piece=▁short
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=2 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4520 all=11291 active=982 piece=▁आवंटन
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4540 all=11273 active=964 piece=▁जोड़ी
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4560 all=11254 active=945 piece=▁बैकऑफ
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4580 all=11241 active=932 piece=▁हटाएं
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4600 all=11246 active=937 piece=र्साइसर
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=2 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4620 all=11231 active=985 piece=▁Loaded
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4640 all=11216 active=970 piece=▁declar
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4660 all=11201 active=955 piece=▁slices
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4680 all=11183 active=937 piece=▁क्रिया
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4700 all=11164 active=918 piece=▁भण्डार
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=2 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4720 all=11146 active=983 piece=▁समाप्त
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4740 all=11132 active=969 piece=▁Example
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4760 all=11112 active=949 piece=▁affects
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4780 all=11097 active=934 piece=▁logging
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4800 all=11079 active=916 piece=▁एनीमेशन
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=2 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4820 all=11064 active=986 piece=▁फ़ाइलों
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4840 all=11045 active=967 piece=▁सस्पेंड
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4860 all=11033 active=955 piece=▁PLAYLIST
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4880 all=11014 active=936 piece=▁debugger
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4900 all=10995 active=917 piece=▁template
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=2 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4920 all=10978 active=984 piece=▁सत्यापित
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4940 all=10961 active=967 piece=▁connected
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4960 all=10945 active=951 piece=▁पंक्तियाँ
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=4980 all=10926 active=932 piece=▁Parameters
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=5000 all=10906 active=912 piece=▁Indentation
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=2 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=2 size=5020 all=10886 active=981 piece=▁automatically
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5040 all=10882 active=977 piece=टोप
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5060 all=10887 active=982 piece=▁झट
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5080 all=10892 active=987 piece=sued
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5100 all=10896 active=991 piece=बदलो
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5120 all=10896 active=1001 piece=सियन
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5140 all=10893 active=998 piece=▁Box
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5160 all=10879 active=984 piece=▁ऐसे
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5180 all=10871 active=976 piece=altic
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5200 all=10878 active=983 piece=ogene
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5220 all=10878 active=999 piece=▁सरह
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5240 all=10879 active=1000 piece=क्सेस
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5260 all=10878 active=999 piece=म्बाई
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5280 all=10880 active=1001 piece=ीटर्स
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5300 all=10873 active=994 piece=▁Loop
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5320 all=10876 active=1004 piece=▁ose
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5340 all=10869 active=997 piece=▁Refc
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5360 all=10860 active=988 piece=▁guid
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5380 all=10850 active=978 piece=▁आरोह
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5400 all=10835 active=963 piece=▁चलना
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5420 all=10842 active=1008 piece=jesh
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5440 all=10841 active=1007 piece=▁pus
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5460 all=10836 active=1002 piece=▁करिए
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5480 all=10819 active=985 piece=▁फीफो
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5500 all=10803 active=969 piece=▁लाइव
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5520 all=10802 active=1000 piece=फ़ाई
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5540 all=10802 active=1000 piece=्रेशो
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5560 all=10794 active=992 piece=▁सोना
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5580 all=10790 active=988 piece=ention
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5600 all=10790 active=988 piece=played
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5620 all=10798 active=1008 piece=▁मृ
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5640 all=10797 active=1007 piece=osave
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5660 all=10789 active=999 piece=riketh
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5680 all=10791 active=1001 piece=फ़िक्स
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5700 all=10790 active=1000 piece=्टियाँ
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5720 all=10791 active=1001 piece=▁टच
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5740 all=10788 active=998 piece=uffle
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5760 all=10782 active=992 piece=▁Activ
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5780 all=10767 active=977 piece=▁Ident
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5800 all=10751 active=961 piece=▁River
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5820 all=10745 active=995 piece=▁वे
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5840 all=10743 active=993 piece=▁हाप
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5860 all=10737 active=987 piece=▁वर्क
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5880 all=10723 active=973 piece=▁Trunc
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5900 all=10714 active=964 piece=▁fives
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5920 all=10720 active=1007 piece=स्या
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5940 all=10715 active=1002 piece=▁frag
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5960 all=10706 active=993 piece=▁flagg
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=5980 all=10694 active=981 piece=▁spell
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6000 all=10678 active=965 piece=▁एल्बम
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6020 all=10679 active=1002 piece=दिना
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6040 all=10673 active=996 piece=▁they
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6060 all=10664 active=987 piece=▁since
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6080 all=10649 active=972 piece=▁चलाने
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6100 all=10631 active=954 piece=▁दिखता
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6120 all=10633 active=1003 piece=न्फि
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6140 all=10634 active=1004 piece=▁Quit
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6160 all=10625 active=995 piece=▁Apply
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6180 all=10610 active=980 piece=▁फील्ड
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6200 all=10593 active=963 piece=▁राज्य
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6220 all=10594 active=1002 piece=फारम
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6240 all=10589 active=997 piece=▁Mont
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6260 all=10577 active=985 piece=▁रूकें
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6280 all=10559 active=967 piece=▁सफ़ाई
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6300 all=10543 active=951 piece=▁हाथाप
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6320 all=10544 active=1001 piece=िगो
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6340 all=10542 active=999 piece=using
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6360 all=10530 active=987 piece=▁चारों
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6380 all=10523 active=980 piece=dvanced
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6400 all=10521 active=978 piece=ratlami
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6420 all=10519 active=998 piece=▁फ्ल
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6440 all=10510 active=989 piece=ख्यिकी
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6460 all=10506 active=985 piece=चटीएमएल
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6480 all=10503 active=982 piece=्सक्राई
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6500 all=10488 active=967 piece=▁Docked
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6520 all=10486 active=999 piece=हाईन
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6540 all=10485 active=998 piece=▁west
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6560 all=10472 active=985 piece=▁मैनेज
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6580 all=10461 active=974 piece=▁Hungar
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6600 all=10444 active=957 piece=▁Placed
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6620 all=10448 active=1005 piece=omly
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6640 all=10443 active=1000 piece=▁बजाय
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6660 all=10438 active=995 piece=▁floss
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6680 all=10424 active=981 piece=▁Resume
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6700 all=10407 active=964 piece=▁adapts
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6720 all=10405 active=999 piece=▁TCP
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6740 all=10395 active=989 piece=पंक्ति
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6760 all=10382 active=976 piece=▁applet
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6780 all=10364 active=958 piece=▁digits
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6800 all=10346 active=940 piece=▁maller
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6820 all=10344 active=999 piece=atal
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6840 all=10334 active=989 piece=agers
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6860 all=10320 active=975 piece=pposed
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6880 all=10308 active=963 piece=▁avatar
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6900 all=10291 active=946 piece=▁rebase
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6920 all=10288 active=998 piece=▁lu
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6940 all=10281 active=991 piece=▁पते
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6960 all=10274 active=984 piece=▁इंगित
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=6980 all=10258 active=968 piece=▁second
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7000 all=10243 active=953 piece=▁असीमित
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7020 all=10236 active=994 piece=dessa
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7040 all=10228 active=986 piece=▁Block
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7060 all=10209 active=967 piece=▁आर्गुम
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7080 all=10191 active=949 piece=▁कोरियन
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7100 all=10171 active=929 piece=▁टाइम्स
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7120 all=10164 active=994 piece=▁few
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7140 all=10155 active=985 piece=▁दाएँ
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7160 all=10146 active=976 piece=▁Preset
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7180 all=10126 active=956 piece=▁दाहिना
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7200 all=10107 active=937 piece=▁बच्चों
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7220 all=10101 active=995 piece=▁बने
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7240 all=10089 active=983 piece=▁stop
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7260 all=10076 active=970 piece=▁बाकीः
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7280 all=10059 active=953 piece=▁बनायें
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7300 all=10041 active=935 piece=▁रहेंगे
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7320 all=10034 active=994 piece=fixed
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7340 all=10023 active=983 piece=itions
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7360 all=10009 active=969 piece=▁styles
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7380 all=9992 active=952 piece=▁वास्तव
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7400 all=9974 active=934 piece=▁सिंक्र
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7420 all=9968 active=994 piece=▁hue
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7440 all=9957 active=983 piece=▁dece
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7460 all=9944 active=970 piece=▁न्यास
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7480 all=9925 active=951 piece=▁स्तम्भ
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7500 all=9914 active=940 piece=estroyed
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7520 all=9910 active=996 piece=ugins
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7540 all=9898 active=984 piece=▁Lines
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7560 all=9882 active=968 piece=▁zoomed
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7580 all=9875 active=961 piece=पासवर्डः
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7600 all=9860 active=946 piece=▁Details
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7620 all=9851 active=992 piece=श्रोत
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7640 all=9833 active=974 piece=▁लंबा
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7660 all=9815 active=956 piece=▁covers
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7680 all=9796 active=937 piece=▁Inspect
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7700 all=9777 active=918 piece=▁Outline
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7720 all=9772 active=996 piece=▁Sche
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7740 all=9754 active=978 piece=▁Three
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7760 all=9736 active=960 piece=▁actual
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7780 all=9716 active=940 piece=▁Results
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7800 all=9696 active=920 piece=▁Updated
+bpe_model_trainer.cc(159) LOG(INFO) Updating active symbols. max_freq=1 min_freq=1
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7820 all=9683 active=988 piece=सारणी
+bpe_model_trainer.cc(268) LOG(INFO) Added: freq=1 size=7840 all=9667 active=972 piece=पूर्वज
+trainer_interface.cc(687) LOG(INFO) Saving model: /workspace/scratch/4612eb3a7665/fgai-assignment3/checkpoints/basic/tokenizer.model
+trainer_interface.cc(699) LOG(INFO) Saving vocabs: /workspace/scratch/4612eb3a7665/fgai-assignment3/checkpoints/basic/tokenizer.vocab
+/root/.local/lib/python3.12/site-packages/torch/nn/modules/transformer.py:508: UserWarning: The PyTorch API of nested tensors is in prototype stage and will change in the near future. We recommend specifying layout=torch.jagged when constructing a nested tensor, as this layout receives active development, has better operator coverage, and works with torch.compile. (Triggered internally at /pytorch/aten/src/ATen/NestedTensorImpl.cpp:178.)
+  output = torch._nested_tensor_from_mask(
+basic {'epoch': 1, 'train_smoothed_loss': 7.66752641498784, 'validation_nll': 8.68790943400646}
+basic {'epoch': 2, 'train_smoothed_loss': 6.603221795572026, 'validation_nll': 8.812624893754908}
+basic {'epoch': 3, 'train_smoothed_loss': 6.338626017147283, 'validation_nll': 8.88804845194487}
+basic {'epoch': 4, 'train_smoothed_loss': 6.162449528144666, 'validation_nll': 8.837685698852887}
+basic {'epoch': 5, 'train_smoothed_loss': 5.993432361013319, 'validation_nll': 8.924553191981815}
+basic {'epoch': 6, 'train_smoothed_loss': 5.8503235876991, 'validation_nll': 8.90067342238587}
+{
+  "model": "basic",
+  "adaptation": "trained from scratch; best validation NLL checkpoint",
+  "bleu": 0.0,
+  "chrf": 0.0,
+  "bleu_signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1",
+  "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.5.1",
+  "training_seconds": 47.30488893599977,
+  "load_and_setup_seconds": 0.8709694530007255,
+  "inference_seconds": 0.27723704500021995,
+  "seconds_per_sentence": 0.0027723704500021997,
+  "test_sentences": 100,
+  "parameters": 2982208,
+  "trainable_parameters": 2982208,
+  "parameter_bytes": 11928832,
+  "peak_cuda_allocated_mb": null,
+  "capped_outputs": 0,
+  "dtype": "torch.float32"
+}
+# Measured experiment results
+
+| Model | BLEU | chrF | Training s | Inference s | Parameters |
+|---|---:|---:|---:|---:|---:|
+| basic | 0.00 | 0.00 | 47.30 | 0.28 | 2,982,208 |
+
+## Conclusion
+
+The four-model experiment is incomplete. No overall winner can yet be named.
+
+## Sampling-temperature analysis
+
+basic: greedy chrF 0.00; highest observed mean chrF 4.89 at temperature 1. Nonzero settings use three seeds. These test-subset observations are descriptive and must not be used to retune the main benchmark.
+
+## Output screening
+
+basic: 100 test translations triggered at least one heuristic review flag. Flags are screening signals, not confirmed ethical violations; digit-script differences can be benign.
+
+Human inspection must confirm adequacy, bias, invented facts, cultural meaning and sensitive-content handling. Use the saved translations and ethical probes; do not call heuristic flags proven bias or hallucination.
+

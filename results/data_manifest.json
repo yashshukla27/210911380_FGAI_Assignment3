@@ -1,0 +1,31 @@
+{
+  "dataset": "cfilt/iitb-english-hindi",
+  "revision": "321516f50bdcc1214fa75164c545478976ed84bd",
+  "seed": 42,
+  "splits": {
+    "test": {
+      "examined": 2507,
+      "after_content_filter": 2289,
+      "after_deduplication": 2288,
+      "selected": 100,
+      "ordered_id_sha256": "84ca0f296a13c9d244196cddbbea5ff675cfe5015aef07683d999beda5d3b604"
+    },
+    "validation": {
+      "examined": 520,
+      "after_content_filter": 506,
+      "after_deduplication": 506,
+      "selected": 100,
+      "ordered_id_sha256": "4f1324e2ff202279455be85b4c648f67b6baf3c60ac8ae24a34b571fae061917"
+    },
+    "train": {
+      "examined": 50000,
+      "after_content_filter": 48154,
+      "after_deduplication": 7773,
+      "selected": 2000,
+      "ordered_id_sha256": "d0cd4649031e7dcde8bcbc9f69d382eeeec017ff460b9adb1b2626cbef033fe4"
+    }
+  },
+  "sampling_note": "Official partitions retained; bounded buffered shuffle of the training stream; short-sentence subset.",
+  "normalization": "Unicode NFC, collapse whitespace, preserve case/punctuation/Devanagari.",
+  "deduplication": "casefolded English OR exact normalized Hindi; held-out partitions take priority."
+}

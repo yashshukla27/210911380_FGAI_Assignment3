@@ -1,0 +1,23 @@
+{
+  "basic": {
+    "model": "basic",
+    "adaptation": "trained from scratch; best validation NLL checkpoint",
+    "bleu": 0.0,
+    "chrf": 0.0,
+    "bleu_signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1",
+    "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.5.1",
+    "training_seconds": 47.30488893599977,
+    "load_and_setup_seconds": 0.8709694530007255,
+    "inference_seconds": 0.27723704500021995,
+    "seconds_per_sentence": 0.0027723704500021997,
+    "test_sentences": 100,
+    "parameters": 2982208,
+    "trainable_parameters": 2982208,
+    "parameter_bytes": 11928832,
+    "peak_cuda_allocated_mb": null,
+    "capped_outputs": 0,
+    "dtype": "torch.float32",
+    "device": "cpu",
+    "hardware": "x86_64"
+  }
+}
